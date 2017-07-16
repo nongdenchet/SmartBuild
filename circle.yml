@@ -1,0 +1,20 @@
+machine:
+  java:
+    version: oraclejdk8
+  python:
+    version: 2.7.10
+
+test:
+  override:
+    - python ./script/build.py
+    - if [ $CIRCLE_BRANCH = 'master' ]; then ./gradlew assembleRelease; fi
+    - if [ $CIRCLE_BRANCH = 'master' ]; then cp -r ${HOME}/${CIRCLE_PROJECT_REPONAME}/Browser/build/outputs/apk $CIRCLE_ARTIFACTS; fi
+    - if [ $CIRCLE_BRANCH = 'master' ]; then cp -r ${HOME}/${CIRCLE_PROJECT_REPONAME}/FileExplorer/build/outputs/apk $CIRCLE_ARTIFACTS; fi
+  post:
+    # - bash <(curl -s https://codecov.io/bash) -t [YOUR_KEY]
+
+deployment:
+    production:
+        branch: master
+        commands:
+            # - ./gradlew githubRelease --info

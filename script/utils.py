@@ -40,6 +40,8 @@ def detect_changed_modules(compare_branch):
     all_modules = get_modules("../settings.gradle")
     for dir in directory_changes(compare_branch):
         print dir
+        if dir.startswith("Data/"):
+            return all_modules
         for module in all_modules:
             if dir.startswith("{0}/".format(module)):
                 result.add(module)

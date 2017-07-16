@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Browser/Browser.iml" filepath="$PROJECT_DIR$/Browser/Browser.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Data/data.iml" filepath="$PROJECT_DIR$/Data/data.iml" />
-      <module fileurl="file://$PROJECT_DIR$/FileExplorer/fileexplorer.iml" filepath="$PROJECT_DIR$/FileExplorer/fileexplorer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Data/Data.iml" filepath="$PROJECT_DIR$/Data/Data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FileExplorer/FileExplorer.iml" filepath="$PROJECT_DIR$/FileExplorer/FileExplorer.iml" />
       <module fileurl="file://$PROJECT_DIR$/SmartBuild.iml" filepath="$PROJECT_DIR$/SmartBuild.iml" />
     </modules>
   </component>

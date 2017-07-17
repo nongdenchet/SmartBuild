@@ -41,6 +41,7 @@ def detect_changed_modules(compare_branch):
     for dir in directory_changes(compare_branch):
         print dir
         if dir.startswith("Data/"):
+            print "Data changing rebuild all"
             return all_modules
         for module in all_modules:
             if dir.startswith("{0}/".format(module)):
